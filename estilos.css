@@ -1,0 +1,362 @@
+:root {
+    --bg-light: #f9f9f9;
+    --bg-dark: #1e1e1e;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --card-light: white;
+    --card-dark: #2c2c2c;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+    --highlight-color: #ff3c74; /* Color de realce para UCuéntame */
+}
+
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* tsParticles - Fondo animado */
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Cabecera */
+header {
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--highlight-color);
+    margin: 0;
+    font-size: 2.2em;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+.btn-oscuro {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-oscuro:hover {
+    background: var(--highlight-color);
+}
+
+/* Secciones principales */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: var(--card-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+section h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: var(--card-light);
+    color: var(--text-light);
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+/* Contenedor de la Galería/Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilos para cada Cuadro de Contenido (Capítulo/Protagonista) */
+.content-card {
+    background: var(--card-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer; /* Indica que es clicable */
+}
+
+.content-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.content-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.content-card h3 {
+    margin: 1rem 1rem 0.5rem;
+    color: var(--highlight-color);
+    font-size: 1.3em;
+}
+
+.content-card p {
+    margin: 0 1rem 1rem;
+    font-size: 0.95em;
+    color: var(--text-light);
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+}
+
+/* Pie de página */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Modo Oscuro */
+body.modoOscuro {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.modoOscuro section {
+    background-color: var(--card-dark);
+    box-shadow: 0 4px 10px var(--shadow-dark);
+}
+
+body.modoOscuro .content-card {
+    background: var(--card-dark);
+    box-shadow: 0 4px 8px var(--shadow-dark);
+}
+
+body.modoOscuro .content-card:hover {
+    box-shadow: 0 8px 20px var(--shadow-dark);
+}
+
+body.modoOscuro input[type="text"] {
+    border-color: #666;
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+}
+
+/* Estilos para la Ventana Modal (Popup) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/*para modificar el tamaño de la ventana modal*/
+body.modoOscuro .modal {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+    background-color: var(--card-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.modoOscuro .modal-content {
+    background-color: var(--card-dark);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.modal-image-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.modal-image-text img {
+    width: 50%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+}
+
+body.modoOscuro .modal-image-text img {
+    background-color: #333;
+}
+
+.text-box {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--text-light);
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.modoOscuro .text-box {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    border-color: #444;
+}
+
+/* Contenedor responsivo para el video de YouTube */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 768px) {
+    header { padding: 1rem 3rem; }
+    .modal-image-text { flex-direction: row; }
+    .modal-image-text img { width: 45%; height: auto; }
+    .text-box { width: 55%; }
+}
+
+@media (max-width: 767px) {
+    header { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1rem; }
+    header h1 { font-size: 2em; }
+    nav ul { flex-direction: column; gap: 0.5rem; width: 100%; text-align: center; }
+    nav li { width: 100%; }
+    nav a { display: block; padding: 0.5rem 0; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; }
+    .btn-oscuro { width: 100%; margin-top: 0.5rem; }
+    main { padding: 1rem; }
+    section { padding: 1.5rem; }
+    section h2 { font-size: 2em; }
+    input[type="text"] { padding: 0.6rem 0.8rem; }
+    .grid { grid-template-columns: 1fr; }
+    .modal-content { width: 98%; padding: 15px; gap: 15px; }
+    .close-button { font-size: 28px; right: 15px; top: 10px; }
+    .modal-image-text { flex-direction: column; gap: 15px; }
+    .modal-image-text img { max-height: 300px; }
+    .text-box { padding: 15px; font-size: 1em; }
+}

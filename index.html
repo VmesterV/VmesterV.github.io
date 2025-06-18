@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCuéntame Podcast</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <header>
+        <h1>UCuéntame</h1>
+        <nav>
+            <ul>
+                <li><a href="#capitulos">Capítulos</a></li>
+                <li><a href="#protagonistas">Protagonistas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="darkModeToggle" class="btn-oscuro">MODO OSCURO</button>
+    </header>
+
+    <main>
+        <section id="capitulos">
+            <h2 data-aos="fade-down">CAPÍTULOS</h2>
+            <div class="search-container">
+                <input type="text" id="busquedaCapitulos" placeholder="Buscar capítulo..." />
+            </div>
+            <div id="catalogoCapitulos" class="grid"></div>
+        </section>
+
+        <section id="protagonistas">
+            <h2 data-aos="fade-down">PROTAGONISTAS</h2>
+            <div class="search-container">
+                <input type="text" id="busquedaProtagonistas" placeholder="Buscar protagonista..." />
+            </div>
+            <div id="catalogoProtagonistas" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, puedes contactarnos a través de nuestras redes sociales:</p>
+            <ul>
+                <li><a href="https://vm.tiktok.com/ZMSfn4a23/" target="_blank">tiktok</a></li>
+                <li><a href="https://www.facebook.com/share/v/1ARBP2PPDL/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/reel/DK58PH1IRb1/?igsh=MXd5b3lxMHBtOHo2dQ==" target="_blank">instagram</a></li>
+            </ul>
+        <p>&copy; 2025 UCuéntame - Todos los derechos reservados</p>
+
+    </footer>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-text">
+                    <img id="modalImage" src="" alt="Imagen Ampliada">
+                    <div id="modalText" class="text-box"></div>
+                </div>
+                <div id="videoContainer" class="video-container">
+                    <iframe id="youtubePlayer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" ></script>
+</body>
+</html>
