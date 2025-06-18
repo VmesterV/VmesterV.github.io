@@ -36,18 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             nombre: "Capítulo 1",
-            imagen: "UCuentame.PNG",
+            imagen: "UCuentame.png",
             descripcion: "Iniciamos un el podcast con nuestro primer capítulo.",
-            imagenModal: "UCuentame.PNG",
+            imagenModal: "UCuentame.png",
             textoModal: "Falta introducción.",
             videoModal: "https://www.youtube.com/embed/BLsEVkIazd8?si=VZX-pURXSfwZZLz7" // ID de video de ejemplo
         },
         {
             id: 2,
             nombre: "Capítulo 2",
-            imagen: "UCuentame.PNG",
+            imagen: "UCuentame.png",
             descripcion: "Nuestro segundo capítulo hablamos de un tema importante",
-            imagenModal: "UCuentame.PNG",
+            imagenModal: "UCuentame.png",
             textoModal: "Falta introducción.",
             videoModal: "https://www.youtube.com/embed/KsXHzSa0Yss?si=Kvf7xfd_qinNySq8" // ID de video de ejemplo
         },
@@ -58,18 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             nombre: "Ana García",
-            imagen: "mujer.PNG",
+            imagen: "mujer.png",
             descripcion: "La voz principal de UCuéntame, con años de experiencia en narración.",
-            imagenModal: "mujer.PNG",
+            imagenModal: "mujer.png",
             textoModal: "Ana García es la fuerza motriz detrás de cada episodio. Conoce su trayectoria y su visión.",
             
         },
         {
             id: 2,
             nombre: "Luis Mendoza",
-            imagen: "hombre.PNG",
+            imagen: "hombre.png",
             descripcion: "Cuenta sus experiencias en la violencia familiar.",
-            imagenModal: "hombre.PNG",
+            imagenModal: "hombre.png",
             textoModal: "Luis Mendoza, el meticuloso investigador. Descubre cómo su trabajo enriquece cada episodio.",
             
         }
