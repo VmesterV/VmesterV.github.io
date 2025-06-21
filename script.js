@@ -58,18 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             nombre: "Ana García",
-            imagen: "mujer.png",
+            imagen: "mujer.jpg",
             descripcion: "La voz principal de UCuéntame, con años de experiencia en narración.",
-            imagenModal: "mujer.png",
+            imagenModal: "mujer.jpg",
             textoModal: "Ana García es la fuerza motriz detrás de cada episodio. Conoce su trayectoria y su visión.",
             
         },
         {
             id: 2,
             nombre: "Luis Mendoza",
-            imagen: "hombre.png",
+            imagen: "hombre.jpg",
             descripcion: "Cuenta sus experiencias en la violencia familiar.",
-            imagenModal: "hombre.png",
+            imagenModal: "hombre.jpg",
             textoModal: "Luis Mendoza, el meticuloso investigador. Descubre cómo su trabajo enriquece cada episodio.",
             
         }
