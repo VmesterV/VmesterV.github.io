@@ -360,3 +360,8 @@ body.modoOscuro .text-box {
     .modal-image-text img { max-height: 300px; }
     .text-box { padding: 15px; font-size: 1em; }
 }
+.texta{
+    text-decoration:none;
+    color: var(--text-dark);
+    font-weight: bold; 
+}
