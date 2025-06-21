@@ -238,8 +238,8 @@ body.modoOscuro .modal {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     position: relative;
-    width: 90%;
-    max-width: 700px;
+    width: 80%; 
+    max-width: 520px;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -283,8 +283,8 @@ body.modoOscuro .modal-content {
 }
 
 .modal-image-text img {
-    width:150px;
-    max-height: 150px;
+    width: 50%;
+    max-height: 200px;
     object-fit: contain;
     border-radius: 8px;
     flex-shrink: 0;
