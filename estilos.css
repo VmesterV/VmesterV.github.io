@@ -283,8 +283,8 @@ body.modoOscuro .modal-content {
 }
 
 .modal-image-text img {
-    width: 50%;
-    max-height: 250px;
+    width:150px;
+    max-height: 150px;
     object-fit: contain;
     border-radius: 8px;
     flex-shrink: 0;

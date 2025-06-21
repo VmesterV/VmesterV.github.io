@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagen: "UCuentame.png",
             descripcion: "Iniciamos un el podcast con nuestro primer capítulo.",
             imagenModal: "UCuentame.png",
-            textoModal: "Falta introducción.",
+            textoModal: "Guion Episodio 1 Podcast - Tema:La necesidad de denunciar y buscar apoyo en casos de violencia familiar (Cusco-Perú).",
             videoModal: "https://www.youtube.com/embed/BLsEVkIazd8?si=VZX-pURXSfwZZLz7" // ID de video de ejemplo
         },
         {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagen: "UCuentame.png",
             descripcion: "Nuestro segundo capítulo hablamos de un tema importante",
             imagenModal: "UCuentame.png",
-            textoModal: "Falta introducción.",
+            textoModal: "Guion Episodio 2 Podcast - Tema: Recursos y Rutas de Ayuda en Casos de Violencia Familiar (Cusco, Perú).",
             videoModal: "https://www.youtube.com/embed/KsXHzSa0Yss?si=Kvf7xfd_qinNySq8" // ID de video de ejemplo
         },
 
@@ -57,20 +57,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const protagonistasData = [
         {
             id: 1,
-            nombre: "Ana García",
+            nombre: "Silvia Quispe Gayona",
             imagen: "mujer.jpg",
             descripcion: "La voz principal de UCuéntame, con años de experiencia en narración.",
             imagenModal: "mujer.jpg",
-            textoModal: "Ana García es la fuerza motriz detrás de cada episodio. Conoce su trayectoria y su visión.",
+            textoModal: "Estudiante de la carrera de Medicina Humana de la Universidad Continental, apasionada por los Objetivos de Desarrollo Sostenible, promueve proyectos sostenibles.",
             
         },
         {
             id: 2,
-            nombre: "Luis Mendoza",
+            nombre: "José Carliño Quispe Tuco",
             imagen: "hombre.jpg",
             descripcion: "Cuenta sus experiencias en la violencia familiar.",
             imagenModal: "hombre.jpg",
-            textoModal: "Luis Mendoza, el meticuloso investigador. Descubre cómo su trabajo enriquece cada episodio.",
+            textoModal: "Estudiante de la carrera de psicología de la Universidad Continental, apasionado por los deportes y el crecimiento personal.",
+            
+        },
+        {
+            id: 3,
+            nombre: "Daniel Aarón Huillca Mamani",
+            imagen: "hombre.jpg",
+            descripcion: "Cuenta sus experiencias en la violencia familiar.",
+            imagenModal: "hombre.jpg",
+            textoModal: "Estudiante de los carrera de Medicina Humana, comprometido con su formación académica, motivado por ayudar a las personas a mejorar su salud física y mental.",
             
         }
     ];
