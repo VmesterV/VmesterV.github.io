@@ -280,6 +280,8 @@ body.modoOscuro .modal-content {
     flex-direction: column;
     gap: 25px;
     align-items: flex-start;
+    object-fit: cover;
+    aspect-ratio: 1/0.7;
 }
 
 .modal-image-text img {
@@ -289,6 +291,8 @@ body.modoOscuro .modal-content {
     border-radius: 8px;
     flex-shrink: 0;
     background-color: #f0f0f0;
+    object-fit: cover;
+    aspect-ratio: 1/0.7;
 }
 
 body.modoOscuro .modal-image-text img {

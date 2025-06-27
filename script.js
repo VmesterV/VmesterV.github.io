@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 3,
             nombre: "Daniel Aarón Huillca Mamani",
-            imagen: "hombre.jpg",
+            imagen: "fg.jpg",
             descripcion: "Cuenta sus experiencias en la violencia familiar.",
-            imagenModal: "hombre.jpg",
+            imagenModal: "fg.jpg",
             textoModal: "Estudiante de los carrera de Medicina Humana, comprometido con su formación académica, motivado por ayudar a las personas a mejorar su salud física y mental.",
             
         }
