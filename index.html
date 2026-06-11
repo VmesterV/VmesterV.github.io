@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuPoint - Ranking de Reciclaje Escolar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="slider-track" id="sliderTrack">
+            
+            <section class="view-panel" id="view-ranking">
+                <div class="container py-4">
+                    <div class="text-center mb-4">
+                        <h1 class="display-6 fw-bold text-eco-dark">
+                            <i class="bi bi-recycle text-eco-green"></i> TuPoint
+                        </h1>
+                        <h2 class="h4 text-muted">Liga Eco-Escolar: Junio</h2>
+                        <p class="text-eco-blue small">¡El reciclaje en vivo! Los puntajes se actualizan en tiempo real.</p>
+                    </div>
+
+                    <div class="row g-2 mb-4 justify-content-center">
+                        <div class="col-12 col-md-4">
+                            <select id="filterGrado" class="form-select border-eco-green shadow-sm">
+                                <option value="all">Todos los Grados</option>
+                                <option value="1">1° Grado</option>
+                                <option value="2">2° Grado</option>
+                                <option value="3">3° Grado</option>
+                                <option value="4">4° Grado</option>
+                                <option value="5">5° Grado</option>
+                                <option value="6">6° Grado</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <select id="filterSeccion" class="form-select border-eco-green shadow-sm">
+                                <option value="all">Todas las Secciones</option>
+                                <option value="A">Sección A</option>
+                                <option value="B">Sección B</option>
+                                <option value="C">Sección C</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="ranking-header d-flex text-muted fw-bold px-3 pb-2 border-bottom">
+                        <div class="col-2">Pos</div>
+                        <div class="col-6">Salón</div>
+                        <div class="col-4 text-end">Botellas</div>
+                    </div>
+                    <div id="ranking-body" class="ranking-container">
+                        </div>
+                </div>
+            </section>
+
+            <section class="view-panel bg-eco-light" id="view-historial">
+                <div class="container py-4">
+                    <div class="text-center mb-5">
+                        <h1 class="display-6 fw-bold text-eco-dark">
+                            <i class="bi bi-award text-eco-green"></i> Salón de la Fama
+                        </h1>
+                        <p class="text-muted">Top 3 de los meses anteriores</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-eco-green text-white text-center fw-bold">Mayo</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-gold">
+                                        <span><i class="bi bi-trophy-fill text-warning"></i> 1° - 6°B</span> <span class="badge bg-success rounded-pill">4,250</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-silver">
+                                        <span><i class="bi bi-medal-fill text-secondary"></i> 2° - 4°A</span> <span class="badge bg-success rounded-pill">3,980</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-bronze">
+                                        <span><i class="bi bi-medal-fill text-bronze"></i> 3° - 1°C</span> <span class="badge bg-success rounded-pill">3,120</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-eco-blue text-white text-center fw-bold">Abril</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-gold">
+                                        <span><i class="bi bi-trophy-fill text-warning"></i> 1° - 5°C</span> <span class="badge bg-success rounded-pill">3,890</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-silver">
+                                        <span><i class="bi bi-medal-fill text-secondary"></i> 2° - 6°B</span> <span class="badge bg-success rounded-pill">3,750</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-bronze">
+                                        <span><i class="bi bi-medal-fill text-bronze"></i> 3° - 2°A</span> <span class="badge bg-success rounded-pill">2,900</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-eco-dark text-white text-center fw-bold">Marzo</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-gold">
+                                        <span><i class="bi bi-trophy-fill text-warning"></i> 1° - 5°B</span> <span class="badge bg-success rounded-pill">2,500</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-silver">
+                                        <span><i class="bi bi-medal-fill text-secondary"></i> 2° - 3°A</span> <span class="badge bg-success rounded-pill">2,340</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center bg-bronze">
+                                        <span><i class="bi bi-medal-fill text-bronze"></i> 3° - 1°C</span> <span class="badge bg-success rounded-pill">1,980</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <button id="navBtn" class="nav-btn btn btn-eco shadow-lg">
+        <i id="navIcon" class="bi bi-clock-history me-1"></i> 
+        <span id="navText">Historial</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
