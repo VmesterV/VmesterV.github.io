@@ -1,0 +1,129 @@
+/* --- Variables de Color Eco-Amigables --- */
+:root {
+    --eco-green: #2ecc71;       /* Verde vibrante principal */
+    --eco-green-dark: #27ae60;  /* Verde oscuro para bordes */
+    --eco-blue: #3498db;        /* Azul agua/sutil */
+    --eco-light: #f4fbf7;       /* Fondo casi blanco con tinte verde */
+    --eco-dark: #2c3e50;        /* Texto oscuro legible */
+    
+    --row-height: 56px;         /* Altura fija de cada fila para cálculo JS */
+}
+
+body {
+    background-color: var(--eco-light);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Colores utilitarios */
+.text-eco-green { color: var(--eco-green) !important; }
+.text-eco-blue { color: var(--eco-blue) !important; }
+.text-eco-dark { color: var(--eco-dark) !important; }
+.bg-eco-green { background-color: var(--eco-green) !important; }
+.bg-eco-blue { background-color: var(--eco-blue) !important; }
+.bg-eco-dark { background-color: var(--eco-dark) !important; }
+.bg-eco-light { background-color: #eaf7ef !important; }
+.border-eco-green { border-color: var(--eco-green) !important; }
+
+/* Botón Nav */
+.btn-eco {
+    background-color: var(--eco-blue);
+    color: white;
+    border: none;
+}
+.btn-eco:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* --- Layout del Slider --- */
+.app-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.slider-track {
+    display: flex;
+    width: 200%; /* 100% para cada vista */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.view-panel {
+    width: 50%; /* Ocupa el tamaño de la pantalla */
+    min-height: 100vh;
+}
+
+/* Clase JS para activar el slide */
+.slide-active {
+    transform: translateX(-50%);
+}
+
+/* --- Botón Flotante Inferior Izquierdo --- */
+.nav-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1050;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* --- Sistema de Ranking Dinámico --- */
+.ranking-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    /* La altura será manejada dinámicamente por JS */
+    transition: height 0.4s ease; 
+}
+
+.ranking-row {
+    position: absolute; /* Vital para animar la posición en Y (top) */
+    width: 100%;
+    height: 48px;       /* 48px + 8px de margen inferior = 56px de salto (row-height) */
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    padding: 0 1rem;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    border-left: 5px solid transparent;
+}
+
+/* --- Podio (Top 3) --- */
+.rank-1 {
+    border-left-color: #ffd700;
+    background: linear-gradient(90deg, #fffde7, white);
+    z-index: 3;
+}
+.rank-2 {
+    border-left-color: #c0c0c0;
+    background: linear-gradient(90deg, #f5f5f5, white);
+    z-index: 2;
+}
+.rank-3 {
+    border-left-color: #cd7f32;
+    background: linear-gradient(90deg, #fff3e0, white);
+    z-index: 1;
+}
+
+/* Colores para historiales fijos */
+.bg-gold { background-color: #fffde7; border-left: 4px solid #ffd700; }
+.bg-silver { background-color: #f5f5f5; border-left: 4px solid #c0c0c0; }
+.bg-bronze { background-color: #fff3e0; border-left: 4px solid #cd7f32; }
+.text-bronze { color: #cd7f32; }
+
+/* --- Animación de Celebración (Destello / Pulso) --- */
+@keyframes pulse-celebration {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+    50% { transform: scale(1.02); box-shadow: 0 0 15px 10px rgba(46, 204, 113, 0); background-color: #e8f8f5;}
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+.celebrate {
+    animation: pulse-celebration 0.8s ease-out;
+}
